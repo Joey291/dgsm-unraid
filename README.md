@@ -81,3 +81,4 @@ https://github.com/DiscordGSM/DiscordGSM/wiki/Edit-servers.json
 
 # Coming soon:
 -Auto update to the newest Github repo
+-shrink the base image in size
