@@ -1,5 +1,5 @@
 ## This is a Basic script to make The Discord Gameserver monitor easy to run in an unraid docker container
-
+Original repo: https://github.com/DiscordGSM/DiscordGSM
 
 Monitor your game servers on Discord and tracks the live data of your game servers.
 
