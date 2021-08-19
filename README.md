@@ -72,3 +72,7 @@ https://github.com/DiscordGSM/DiscordGSM/wiki/Edit-servers.json
 ]
 ```
 >Note: To Obtain the Channel id in Discord you need to set your discord to Developer Mode under Settings>Advanced. Then right click the channel you want the bot to post the server info and "Copy ID"
+
+
+Coming soon:
+-Auto update to the newest Github repo
