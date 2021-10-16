@@ -1,5 +1,5 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.8-slim-buster
+FROM python:3.10-slim-buster
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -7,7 +7,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
-RUN apt-get update && apt-get install -y git && apt-get install -y jq && \
+RUN apt-get update && apt-get install -y git && apt-get install -y jq && apt-get install -y npm && apt-get install -y nodejs && \
 	rm -rf /var/lib/apt/lists/*
 
 ENV DATA_DIR="/dgsm-docker"
@@ -23,7 +23,9 @@ RUN mkdir $DATA_DIR && \
 
 # Install pip requirements
 COPY requirements.txt .
+RUN python -m pip install --upgrade pip
 RUN pip3 install --no-cache-dir -r requirements.txt
+RUN npm install -g gamedig
 
 WORKDIR /dgsm-docker
 COPY . /dgsm-docker
