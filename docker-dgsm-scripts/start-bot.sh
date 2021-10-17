@@ -12,6 +12,8 @@ if [ ! -f /dgsm-docker/configs/.env ]; then
     cp /dgsm-docker/config-default/.env /dgsm-docker/configs
     chown -R ${UID}:${GID} /dgsm-docker/configs/.env
     chown -R ${UID}:${GID} /dgsm-docker/configs/servers.json
+    chmod 777 /dgsm-docker/configs/.env
+    chmod 777 /dgsm-docker/configs/servers.json
     echo "Default Configs created. Please go to your App Folder and type in your BOT Token for Discord"
     exit 0;
 else

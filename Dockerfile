@@ -1,5 +1,5 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.10-slim-buster
+FROM nikolaik/python-nodejs:python3.10-nodejs16-slim
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -7,7 +7,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
-RUN apt-get update && apt-get install -y git && apt-get install -y jq && apt-get install -y npm && apt-get install -y nodejs && \
+RUN apt-get update && apt-get install -y git && apt-get install -y jq && \
 	rm -rf /var/lib/apt/lists/*
 
 ENV DATA_DIR="/dgsm-docker"
