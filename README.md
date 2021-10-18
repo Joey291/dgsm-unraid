@@ -24,50 +24,33 @@ Note: "permissions=8" in the link will provide the bot with administrative permi
 
 
 ## Configure your Monitored Servers in the servers.json:
-https://github.com/DiscordGSM/DiscordGSM/wiki/Edit-servers.json
+https://github.com/DiscordGSM/DiscordGSM/wiki/servers.json
 
 
-### Example Servers.json:
+### Template Servers.json:
 ```json
 [
     {
-        "type": "SourceQuery",
-        "game": "Team Fortress 2",
-        "addr": "123.456.789.0",
-        "port": 27010,
-        "channel": 680969817200656387,
-        "color": "#ffff00"
-    },
-    {
-        "type": "SourceQuery",
-        "game": "My baby game",
-        "addr": "my.domain.com",
-        "port": 27010,
-        "channel": 680969817200656387,
-        "country": "HK"
-    },
-    {
-        "type": "SourceQuery",
-        "game": "Team Fortress 2",
-        "addr": "123.456.789.0",
-        "port": 27015,
-        "channel": 680969817200656387,
-        "image_url": "https://github.com/DiscordGSM/DiscordGSM/blob/master/images/discordgsm.png?raw=true",
-        "custom": "Join this server now! Free VIP!"
-    },
-    {
-        "type": "UT3Query",
-        "game": "Micecraft: Pocket Edition",
-        "addr": "123.456.789.0",
-        "port": 19132,
-        "channel": 680969817200656387
-    },
-    {
-        "type": "GamedigQuery",
-        "game": "csgo",
-        "addr": "123.456.789.0",
-        "port": 27015,
-        "channel": 680969817200656387
+        "comment": "Informations displayed in the error messages on the console, also usefull to read through servers.json",
+        "type": "[string][mandatory] GamedigQuery or SourceQuery or UT3Query or Fake.",
+        "game": "[string][mandatory] See https://github.com/gamedig/node-gamedig",
+        "address": "[string][mandatory] Relative server address.",
+        "port": "[int][mandatory] Server Port.",
+        "channel": "[int][mandatory] Discord channel id.",
+        "message_id": "[int][optional][autofill] id of the message to update.",
+        "image_url": "[string][optional] URL of the Thumbnail image URL https://static.wikia.nocookie.net/minecraft_gamepedia/images/9/93/Grass_Block_JE7_BE6.png",
+        "custom": "[string][optional] Additionnal information message showed at the bottom of the server embed",
+        "steam_id": "[int][optional] Steam App ID of the game the server is running for. Not the steam id of the dedicated server.",
+        "direct_join": "[bool][optional] Set the link to directly join the server instead of just launching the game. Steam_id must be set.",
+        "color": "[string][optional] RGB color code : #5b8731",
+        "country": "[bool]or[string][optional][autofill] Show the country field, set to false, to disable",
+        "title": "[string][optional] Title of the Embed message.",
+        "public_address": "[string][optional] Diplayed address with port.",
+        "locked": "[bool][optional] Will show the locked icon or unlocked icon.",
+        "password": "[string][optional] Server Password.",
+        "map": "[string][optional] Overwrite Map Name. set to false to remove field.",
+        "maxplayers": "[int][optional] Maximum number of players, overwrite auto-detection if defined.",
+        "hostname": "[string][optional] replaces the value of hostname."
     }
 ]
 ```
