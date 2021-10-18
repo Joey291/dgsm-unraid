@@ -5,7 +5,7 @@ Original repo: https://github.com/DiscordGSM/DiscordGSM
 --After first start of the Container Config files are Created. You Must configure them as you need it otherwise it will not function.--
 
 
-## You need an API Key for your settings.json Config.
+## You need an API Key for your .env Config.
 ```
 Obtaining an API Key:
 
