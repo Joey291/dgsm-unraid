@@ -1,5 +1,5 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM nikolaik/python-nodejs:python3.10-nodejs16-slim
+FROM nikolaik/python-nodejs:python3.10-nodejs17-slim
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
